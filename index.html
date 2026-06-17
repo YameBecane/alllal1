@@ -10,14 +10,13 @@
     <header class="cabecalho">
         <h1>Patinho</h1>
         <nav>
-            <a href="#RogerioPato"
-            class="cabecalho-link">Home</a>
+            <a href="#RogerioPato" class="cabecalho-link">Home</a>
         </nav>
     </header>
     <main>
         <h2>Discover the truth by hovering your mouse</h2>
         <section>
-            <article class="cartao">
+            <article class="cartao" onmouseenter="playQuack()">
                 <div class="cartao-interno">
                     <div class="cartao-frente">
                         <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTf2o8zuDAU9eoevtEZY129pH3lusjREey4toE6uHCJh-dW3Pi4VfW3ppBt0Sdj" alt="Duck" class="cartao-imagem">
@@ -29,14 +28,14 @@
                     </div>
                 </div>
             </article>
-            <article class="cartao">
+            <article class="cartao" onmouseenter="playQuack()">
                 <div class="cartao-interno">
                     <div class="cartao-frente">
                         <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTf2o8zuDAU9eoevtEZY129pH3lusjREey4toE6uHCJh-dW3Pi4VfW3ppBt0Sdj" alt="Duck" class="cartao-imagem">
                         <p>Rogerio pato na sinuca?</p>
                     </div>
                     <div class="cartao-verso">
-                        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTf2o8zuDAU9eoevtEZY129pH3lusjREey4toE6uHCJh-dW3Pi4VfW3ppBt0Sdj" alt="Duck" class="cartao-imagem">
+                        <img src="https://raw.githubusercontent.com/YameBecane/alllal1/refs/heads/main/img.png" alt="Duck" class="cartao-imagem">
                         <p>Não temos duvidas!</p>
                     </div>
                 </div>
@@ -46,5 +45,15 @@
     <footer>
         <p> Create by Soares. S. E </p>
     </footer>
+
+    <audio id="quackAudio" src="https://www.soundjay.com/nature/sounds/duck-quack-1.mp3"></audio>
+
+    <script>
+        function playQuack() {
+            const audio = document.getElementById('quackAudio');
+            audio.currentTime = 0;
+            audio.play().catch(error => console.log("Interação prévia necessária para o áudio tocar."));
+        }
+    </script>
 </body>
 </html>
