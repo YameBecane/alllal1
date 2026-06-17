@@ -36,7 +36,7 @@
                     </div>
                     <div class="cartao-verso">
                         <img src="https://raw.githubusercontent.com/YameBecane/alllal1/refs/heads/main/img.png" alt="Duck" class="cartao-imagem">
-                        <p>Não temos duvidas!</p>
+                        <p>Rogerio e o cara mais pato que existe</p>
                     </div>
                 </div>
             </article>
@@ -46,13 +46,13 @@
         <p> Create by Soares. S. E </p>
     </footer>
 
-    <audio id="quackAudio" src="https://www.soundjay.com/nature/sounds/duck-quack-1.mp3"></audio>
-
     <script>
         function playQuack() {
-            const audio = document.getElementById('quackAudio');
-            audio.currentTime = 0;
-            audio.play().catch(error => console.log("Interação prévia necessária para o áudio tocar."));
+            const audioUrl = "https://actions.google.com/sounds/v1/animals/duck_quack.ogg";
+            const audio = new Audio(audioUrl);
+            audio.play().catch(error => {
+                console.log("O navegador bloqueou o áudio. Clique na página uma vez antes de passar o mouse.");
+            });
         }
     </script>
 </body>
